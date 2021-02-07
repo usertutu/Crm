@@ -5,6 +5,8 @@
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
 
+
+
   <!--
 
     add/create:跳转到添加页，或者打开添加操作的模态窗口
@@ -17,6 +19,24 @@
 
   -->
 
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.bjpowernode.crm.web.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.bjpowernode.crm.web.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
 
 
   <!-- 用户控制器 -->
